@@ -156,6 +156,19 @@ footer .brand .dot { color: var(--accent); }
   .step::before { left: 14px; top: 18px; }
 }
 
+/* 회사 정보 푸터 */
+.site-footer { display: block; margin-top: 80px; border-top: none; background: var(--bg-muted); border-radius: 8px; padding: 30px 34px; font-size: 14.5px; color: var(--ink-body); line-height: 1.8; }
+.site-footer .f-logo { display: block; height: 40px; width: auto; margin-bottom: 14px; mix-blend-mode: multiply; }
+.site-footer .f-company { font-weight: 800; color: var(--ink-strong); font-size: 15.5px; margin-bottom: 6px; }
+.site-footer .f-line { color: var(--ink-body); }
+.site-footer .f-k { color: var(--ink-muted); margin-right: 4px; }
+.site-footer .f-sep { color: var(--border-strong); margin: 0 10px; }
+.site-footer .f-red { color: #D6001C; }
+@media (max-width: 640px) {
+  .site-footer { padding: 22px 20px; font-size: 13.5px; }
+  .site-footer .f-sep { margin: 0 6px; }
+}
+
 /* 이벤트 버튼 + 팝업 */
 .event-btn { display: inline-flex; align-items: center; gap: 10px; background: var(--accent); color: #fff; border: none; font-family: inherit; font-size: 16px; font-weight: 800; padding: 13px 22px; border-radius: 8px; cursor: pointer; letter-spacing: -0.01em; box-shadow: 0 4px 14px rgba(204,153,101,0.35); transition: background .12s, transform .12s; }
 .event-btn:hover { background: var(--accent-dark); transform: translateY(-1px); }
@@ -387,9 +400,11 @@ pre { word-break: normal; overflow-wrap: normal; }
     <p>SK일렉링크 공용 급속 충전기에서 적용됩니다. 일부 고속도로 휴게소, 위탁운영, 비공용 충전소는 할인이 적용되지 않으니 SK일렉링크 앱에서 대상 충전소를 확인하세요.</p>
   </section>
 
-  <footer>
-    <div class="brand">SK일렉링크<span class="dot">.</span> Master요금제 가입 설명서</div>
-    <div>기준 화면: admin-corp.sscharger.co · 2026.08</div>
+  <footer class="site-footer">
+    <img class="f-logo" src="data:image/png;base64,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" alt="SK일렉링크" />
+    <div class="f-company">SK일렉링크 주식회사</div>
+    <div class="f-line">(06053) 서울특별시 강남구 언주로135길 15, SK일렉링크 <span class="f-sep">│</span> <span class="f-k">사업자등록번호</span> 378-86-02680 <span class="f-sep">│</span> <span class="f-k">통신판매업신고</span> 제2026-서울강남-03117호</div>
+    <div class="f-line"><span class="f-k">대표이사</span> 류영준 <span class="f-sep">│</span> <span class="f-k">고객센터</span> <strong>1566-1704</strong> <span class="f-red">(야간에도, 공휴일에도. 365일 24시간 상담 가능한 번호)</span></div>
   </footer>
 
 </main>
